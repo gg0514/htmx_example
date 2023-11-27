@@ -1,1 +1,1 @@
-hello, world
+htmx basic

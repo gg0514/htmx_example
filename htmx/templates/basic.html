@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://unpkg.com/htmx.org@1.9.9"></script>
+</head>
+<body>
+    
+    <p> hello, 감자 {{key}}  </p>
+
+    
+    <a href={% url 'hello' %} >hello</a><br><br>
+
+
+
+    <button hx-get="/hello" >
+        HTMX !!!
+    </button><br><br>
+
+
+
+    <button hx-get="/dummy" hx-swap="none" >
+        Dummy !!!
+    </button><br><br>
+
+
+
+    <button
+    hx-get="/get-user-data" 
+    hx-trigger="click" 
+    hx-target="#target-element"
+    >
+        Get User Data
+    </button> 
+
+    <div id="target-element">
+        User data will appear here.
+    </div>
+
+
+
+</body>
+</html>
